@@ -1,9 +1,9 @@
 
-import Taskform from "./Components/TaskForm";
-import TaskList from "./Components/TaskList";
-import Progresstracker from "./Components/Progresstracker";
+import TaskForm from "./components/Taskform";
+import TaskList from "./components/TaskList";
+import Progresstracker from "./components/ProgressTracker";
 import { useEffect, useState } from "react";
-import "./Style.css";
+import "./style.css";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
@@ -37,7 +37,7 @@ export default function App() {
       <h1 className="title">Task Focus</h1>
       <p className="tagline">Our friendly TaskManager</p>
       </header>
-      <Taskform addTask = {addTask}/>
+      <TaskForm addTask = {addTask}/>
       <TaskList tasks = {tasks} 
       updateTask = {updateTask}
       deleteTask = {deleteTask}/>
